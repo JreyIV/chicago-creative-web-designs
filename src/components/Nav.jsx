@@ -32,6 +32,7 @@ import {
 } from "framer-motion";
 import { NavLinks } from "../constants";
 import { hamburger } from "../assets/icons";
+import { chicago_creative_logo } from "../assets/images";
 
 const Nav = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -94,7 +95,7 @@ const Nav = () => {
 
   return (
     <motion.nav
-      className="absolute flex justify-between bg-brand-green-600 items-center py-10 px-20 max-lg:bg-opacity-0 text-white w-full"
+      className=" absolute flex justify-between bg-transparent items-center py-10 max-md:px-5 px-20 max-lg:bg-opacity-0 text-white w-full bg-red-300"
       variants={{
         visible: { y: 0 },
         hidden: { y: "-100%" },
@@ -105,72 +106,81 @@ const Nav = () => {
       }}
       animate={isSmallScreen ? "visible" : isNavHidden ? "hidden" : "visible"}
     >
-      <a href="/" className="">
-        <h1>Chicago Creative</h1>
-      </a>
-      <ul className="flex justify-center items-center gap-20 max-lg:hidden font-bold">
-        {NavLinks.map((link) => (
-          <li key={link.label}>
-            <motion.a
-              href={link.href}
-              className="font-okine leading-normal text-lg text-white"
-              whileHover={{ color: "#67B99A" }}
+      <div className="max-container relative flex justify-between items-center w-full max-md:px-5">
+        <a href="/">
+          <img
+            src={chicago_creative_logo}
+            alt="Chicago Creative Logo"
+            width={isSmallScreen ? 200 : 300}
+          />
+        </a>
+        <ul className="flex justify-center items-center max-xl:gap-10 gap-20 max-lg:hidden font-bold ml-auto">
+          {NavLinks.map((link) => (
+            <li key={link.label}>
+              <motion.a
+                href={link.href}
+                className="font-okine leading-normal text-lg text-white"
+                whileHover={{ color: "#5e60ce" }}
+              >
+                {link.label}
+              </motion.a>
+            </li>
+          ))}
+        </ul>
+        <motion.div
+          whileHover={{ scale: 1.25 }}
+          whileTap={{ scale: 0.95 }}
+          className="hidden max-lg:block cursor-pointer absolute right-0 pr-5"
+          onClick={toggleMenu}
+        >
+          <img src={hamburger} alt="hamburger" width={25} height={25} />
+        </motion.div>
+        <AnimatePresence>
+          {isOpen && (
+            <motion.div
+              variants={menuVars}
+              initial="initial"
+              animate="animate"
+              exit="exit"
+              className="fixed left-0 top-0 w-full h-screen origin-top bg-brand-green p-10 z-50"
             >
-              {link.label}
-            </motion.a>
-          </li>
-        ))}
-      </ul>
-      <motion.div
-        whileHover={{ scale: 1.25 }}
-        whileTap={{ scale: 0.95 }}
-        className="hidden max-lg:block cursor-pointer fixed right-0 pr-5"
-        onClick={toggleMenu}
-      >
-        <img src={hamburger} alt="hamburger" width={25} height={25} />
-      </motion.div>
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            variants={menuVars}
-            initial="initial"
-            animate="animate"
-            exit="exit"
-            className="fixed left-0 top-0 w-full h-screen origin-top bg-brand-green p-10 z-50"
-          >
-            <div className="flex h-full flex-col">
-              <div className="flex justify-between">
-                <h1 className="text-okine text-lg text-off-white">Joseph.</h1>
-                <motion.p
-                  className="cursor-pointer text-md text-off-white"
-                  whileHover={{ scale: 1.3, color: "#14746F" }}
-                  onClick={toggleMenu}
-                >
-                  Close
-                </motion.p>
-              </div>
-              <div className="flex flex-col h-full justify-center items-center gap-4">
-                <ul>
-                  {NavLinks.map((link) => (
-                    <div key={link.label}>
-                      <motion.li key={link.label} whileHover={{ scale: 1.25 }}>
-                        <motion.a
-                          href={link.href}
-                          className="font-okine text-6xl leading-normal text-off-white uppercase"
-                          whileHover={{ color: "#14746F" }}
-                          onClick={closeMenu}
+              <div className="flex h-full flex-col">
+                <div className="flex justify-between">
+                  <h1 className="text-okine text-lg text-off-white">Joseph.</h1>
+                  <motion.p
+                    className="cursor-pointer text-md text-off-white"
+                    whileHover={{ scale: 1.3, color: "#14746F" }}
+                    onClick={toggleMenu}
+                  >
+                    Close
+                  </motion.p>
+                </div>
+                <div className="flex flex-col h-full justify-center items-center gap-4">
+                  <ul>
+                    {NavLinks.map((link) => (
+                      <div key={link.label}>
+                        <motion.li
+                          key={link.label}
+                          whileHover={{ scale: 1.25 }}
                         >
-                          {link.label}
-                        </motion.a>
-                      </motion.li>
-                    </div>
-                  ))}
-                </ul>
+                          <motion.a
+                            href={link.href}
+                            className="font-okine text-6xl leading-normal text-off-white uppercase"
+                            whileHover={{ color: "#14746F" }}
+                            onClick={closeMenu}
+                          >
+                            {link.label}
+                          </motion.a>
+                        </motion.li>
+                      </div>
+                    ))}
+                  </ul>
+                </div>
               </div>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </div>
     </motion.nav>
   );
 };
