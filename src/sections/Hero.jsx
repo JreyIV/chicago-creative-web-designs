@@ -2,8 +2,8 @@ import { hero_image } from "../assets/images";
 
 const Hero = () => {
   return (
-    <section className=" w-100% bg-gradient-to-b from-brand-blue-400 to-brand-blue-800 flex justify-center items-center gap-10 max-md:h-[75vh] h-[60vh]">
-      <div className="max-container max-md:px-5 xl:mt-[25%] max-sm:mt-[130%] md:mt-[30%] lg:mt-[35%] max-md:mt-[120%] flex max-md:flex-col  text-white text-start max-sm:text-start  items-center justify-center">
+    <section className=" w-100% bg-gradient-to-b from-brand-blue-400 to-brand-blue-800 flex justify-center items-center gap-10 max-md:h-[75vh] max-h-[60vh]">
+      <div className="max-container max-md:px-5  max-sm:mt-[35rem] max-md:mt-[45rem] max-lg:mt-[35%] max-xl:mt-[20rem] mt-[20rem] flex max-md:flex-col  text-white text-start max-sm:text-start  items-center justify-center">
         <div className="flex flex-col md:px-5 gap-10">
           <h1 className="text-4xl max-lg:text-3.5xl font-extrabold font-poppins ">
             Tailored{" "}

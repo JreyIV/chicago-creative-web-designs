@@ -5,7 +5,7 @@ import { right_arrow } from "../assets/icons";
 const ProjectsCard = ({ image, title, description, link }) => {
   return (
     <div
-      className="w-1/3 max-md:w-full h-[20rem] rounded-lg"
+      className=" max-md:w-full h-[20rem] rounded-lg shadow-2xl z-10"
       style={{
         backgroundImage: `url(${image})`,
         backgroundSize: "cover",

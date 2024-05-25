@@ -3,6 +3,7 @@ import hero_image from "./hero_image.png";
 import about_transition from "./about_transition.png";
 import portfolio_transition from "./portfolio_transition.png";
 import developer_transition from "./developer_transition.png";
+import pricing_transition from "./pricing_transition.png";
 import responsive_icon from "./responsive_icon.png";
 import optimization_icon from "./optimization_icon.png";
 import custom_icon from "./custom_icon.png";
@@ -12,6 +13,7 @@ import studybnb from "./studybnb.jpg";
 import chicago_skyline_v2 from "./chicago_skyline_v2.svg";
 import chicago_skyline_v3 from "./chicago_skyline_v3.png";
 import me from "./me.jpg";
+import blob1 from "./blob1.svg";
 
 export {
   chicago_creative_logo,
@@ -19,6 +21,7 @@ export {
   about_transition,
   portfolio_transition,
   developer_transition,
+  pricing_transition,
   responsive_icon,
   optimization_icon,
   custom_icon,
@@ -28,4 +31,5 @@ export {
   chicago_skyline_v2,
   chicago_skyline_v3,
   me,
+  blob1,
 };

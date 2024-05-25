@@ -42,12 +42,14 @@ export const portfolio_projects = [
     description: "A website for a local nail technician located in Chicago.",
     src: nails_by_tay,
     url: "https://nails-by-tay.netlify.app/",
+    className: "project-1,",
   },
   {
     title: "Personal Portfolio",
     description: "My personal portfolio website.",
     src: personal_portfolio,
     url: "https://jreyesiv.com/",
+    className: "project-2",
   },
   {
     title: "Studybnb",
@@ -55,5 +57,50 @@ export const portfolio_projects = [
       "A website for a Chicago study space finder concept inspired by airbnb.",
     src: studybnb,
     url: "https://jreyesiv.com/",
+    className: "project-3",
+  },
+];
+
+export const prices = [
+  {
+    price: "1000+",
+    title: "Standard",
+    features: [
+      "Fully Responsive",
+      "Optimization",
+      "Custom Designs",
+      "3 Revisions",
+      "5 pages or less",
+    ],
+    gradient: "linear-gradient(to bottom, #6717CD, #296FF9)",
+    textColor: "#FFFFFF",
+  },
+  {
+    price: "2500+",
+    title: "Plus",
+    features: [
+      "Fully Responsive",
+      "Optimization",
+      "Custom Designs",
+      "5 Revisions",
+      "6-12 Pages",
+    ],
+    color: "rgba(249,250,252,255)",
+    textColor: "#000000",
+  },
+
+  {
+    price: "4000+",
+    title: "Premium",
+    features: [
+      "Fully Responsive",
+      "Optimization",
+      "Custom Designs",
+      "Unlimited Revisions",
+      "12+ Pages",
+      "E-Commerce (Shopify Integration)",
+    ],
+    color: "rgba(249,250,252,255)",
+    textColor: "#000000",
   },
 ];
