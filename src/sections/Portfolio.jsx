@@ -34,7 +34,7 @@ const Portfolio = () => {
               <h3 className="font-poppins font-bold text-2xl">
                 Check out my favorite projects
               </h3>
-              <p className="font-jakarta text-lg">
+              <p className="font-jakarta text-lg leading-relaxed">
                 Chicago Creative is dedicated to creating stunning websites for
                 small businesses. Let us create a website that you can be proud
                 to call your own!

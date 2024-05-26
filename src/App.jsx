@@ -3,7 +3,7 @@ import { Hero, About_home, Portfolio, About_me, Pricing } from "./sections";
 
 function App() {
   return (
-    <main className="relative max-w-[1600px] mx-auto">
+    <main className="relative max-w-[1920px] mx-auto">
       <Nav />
       <section className="overflow-hidden">
         <Hero />

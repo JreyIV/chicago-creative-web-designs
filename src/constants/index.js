@@ -104,3 +104,33 @@ export const prices = [
     textColor: "#000000",
   },
 ];
+
+export const maintenance_package_feautures = [
+  {
+    title: "Hosting Included",
+    description: "Hosting fees included. No additional costs, no worries",
+  },
+  {
+    title: "Unlimited Edits",
+    description:
+      "Update content whenever you want, just reach out and I will get it done asap",
+  },
+  {
+    title: "SEO Maintenance",
+    description:
+      "Regular SEO audits and updates to make sure your website is ranked high in search rankings",
+  },
+  {
+    title: "Technical Support",
+    description:
+      "Ongoing technical support for troubleshooting and resolving issues",
+  },
+  {
+    title: "Analytics Reports",
+    description: "Monthly website performance and traffic reports",
+  },
+  {
+    title: "Backup Services",
+    description: "Regular backups to prevent data loss",
+  },
+];

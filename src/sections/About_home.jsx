@@ -5,7 +5,7 @@ import { aboutCards } from "../constants";
 const About_home = () => {
   return (
     <section className="max-container flex flex-col gap-10 px-5 text-black">
-      <div className="flex flex-col gap-5 items-center justify-center text-center  max-sm:mt-[30rem] max-md:mt-[40rem] max-lg:mt-[25rem] mt-[20rem] lg:px-20 ">
+      <div className="flex flex-col gap-5 items-center justify-center text-center  max-sm:mt-[35rem] max-md:mt-[40rem] max-lg:mt-[25rem] mt-[20rem] lg:px-20 ">
         <h2 className="font-poppins text-3xl font-bold uppercase">
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FFe031] to-[#F04579]">
             Crafting
@@ -25,7 +25,7 @@ const About_home = () => {
             }}
           ></div>
         </div>
-        <p className="font-jakarta text-lg">
+        <p className="font-jakarta text-lg leading-relaxed">
           I specialize in crafting custom websites tailored to meet the unique
           needs of small businesses. All code is hand-written which ensures that
           your website is not only unique but also optimized for speed and

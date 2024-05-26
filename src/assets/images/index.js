@@ -14,6 +14,7 @@ import chicago_skyline_v2 from "./chicago_skyline_v2.svg";
 import chicago_skyline_v3 from "./chicago_skyline_v3.png";
 import me from "./me.jpg";
 import blob1 from "./blob1.svg";
+import maintenance_package from "./maintenance_package.png";
 
 export {
   chicago_creative_logo,
@@ -32,4 +33,5 @@ export {
   chicago_skyline_v3,
   me,
   blob1,
+  maintenance_package,
 };
