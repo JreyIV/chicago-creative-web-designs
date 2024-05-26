@@ -95,7 +95,7 @@ const Nav = () => {
 
   return (
     <motion.nav
-      className=" absolute flex justify-between bg-transparent items-center py-10 max-md:px-5 px-20 max-lg:bg-opacity-0 text-white w-full bg-red-300"
+      className=" absolute flex justify-between bg-transparent items-center py-10 max-md:px-5 px-20 max-lg:bg-opacity-0 text-white w-full"
       variants={{
         visible: { y: 0 },
         hidden: { y: "-100%" },

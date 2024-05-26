@@ -1,6 +1,20 @@
 import { developer_transition, me } from "../assets/images";
+import { motion } from "framer-motion";
 
 const About_me = () => {
+  const fadeVars = {
+    initial: {
+      opacity: 0,
+    },
+    animate: {
+      opacity: 1,
+      transition: {
+        duration: 1,
+        ease: [0.12, 0, 0.39, 0],
+      },
+    },
+  };
+
   return (
     <section className="bg-white relative overflow-hidden">
       <div className="max-container py-20 flex flex-col items-center justify-center gap-5 text-black ">
@@ -26,9 +40,15 @@ const About_me = () => {
           ></div>
         </div>
         <div className="flex max-lg:flex-col items-center gap-10 pt-10 lg:pl-10 xl:pl-0">
-          <div className="image-container">
+          <motion.div
+            variants={fadeVars}
+            initial="initial"
+            whileInView="animate"
+            viewport={{ once: true }}
+            className="image-container"
+          >
             <img src={me} alt="developer profile" width={300} />
-          </div>
+          </motion.div>
           <p className="font-jakarta text-lg max-w-[720px] text-center p-5">
             Now that you know a little about my business, let me tell you a
             little about myself. My name is Joseph Reyes, the creator of Chicago

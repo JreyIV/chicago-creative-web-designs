@@ -17,18 +17,21 @@ export const NavLinks = [
 
 export const aboutCards = [
   {
+    index: 0,
     src: responsive_icon,
     title: "Fully Responsive",
     description:
       "I ensure that your website looks and functions perfectly on all devices. A fully responsive design provides a seamless user experience, which helps keep visitors engaged and increases the likelihood of conversion.",
   },
   {
+    index: 1,
     src: optimization_icon,
     title: "Optimization",
     description:
       "My websites are built with speed and efficiency in mind. I optimize every aspect of your site to ensure fast load times and smooth interactions, which not only improves user satisfaction but also boosts your search engine rankings.",
   },
   {
+    index: 2,
     src: custom_icon,
     title: "Custom Designs",
     description:
@@ -63,6 +66,7 @@ export const portfolio_projects = [
 
 export const prices = [
   {
+    index: 0,
     price: "1000+",
     title: "Standard",
     features: [
@@ -76,6 +80,7 @@ export const prices = [
     textColor: "#FFFFFF",
   },
   {
+    index: 1,
     price: "2500+",
     title: "Plus",
     features: [
@@ -90,6 +95,7 @@ export const prices = [
   },
 
   {
+    index: 2,
     price: "4000+",
     title: "Premium",
     features: [

@@ -2,10 +2,27 @@ import { pricing_transition, maintenance_package } from "../assets/images";
 import { check2 } from "../assets/icons";
 import PriceCards from "../components/PriceCards";
 import { prices, maintenance_package_feautures } from "../constants";
+import { motion } from "framer-motion";
 
 const Pricing = () => {
+  const staggerCardsVars = {
+    initial: {
+      opacity: 0,
+      x: -100,
+    },
+    animate: (index) => ({
+      opacity: 1,
+      x: 0,
+      transition: {
+        duration: 0.5,
+        delay: 0.2 * index,
+        ease: [0.12, 0, 0.39, 0],
+      },
+    }),
+  };
+
   return (
-    <section className="bg-white overflow-hidden">
+    <section className="bg-[#f8f7ff] overflow-hidden">
       <div className="max-container py-20 flex flex-col text-center items-center justify-center gap-5 text-black">
         <div className="">
           <h2 className="font-poppins text-3xl font-bold uppercase">
@@ -37,6 +54,7 @@ const Pricing = () => {
           {prices.map((price) => (
             <PriceCards
               key={price.title}
+              index={price.index}
               title={price.title}
               price={price.price}
               features={price.features}
@@ -69,7 +87,15 @@ const Pricing = () => {
             </p>
             <div className="grid grid-cols-2 max-lg:grid-cols-1 gap-5 mt-10">
               {maintenance_package_feautures.map((feature, index) => (
-                <div key={index} className="flex gap-5">
+                <motion.div
+                  variants={staggerCardsVars}
+                  initial="initial"
+                  whileInView="animate"
+                  viewport={{ once: true }}
+                  custom={index}
+                  key={index}
+                  className="flex gap-5"
+                >
                   <img
                     src={check2}
                     alt="check icon"
@@ -84,7 +110,7 @@ const Pricing = () => {
                       {feature.description}
                     </p>
                   </div>
-                </div>
+                </motion.div>
               ))}
             </div>
           </div>

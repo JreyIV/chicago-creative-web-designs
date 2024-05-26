@@ -1,7 +1,16 @@
 /* eslint-disable react/prop-types */
 import { check, dollar } from "../assets/icons";
+import { motion } from "framer-motion";
 
-const PriceCards = ({ price, title, features, color, gradient, textColor }) => {
+const PriceCards = ({
+  price,
+  title,
+  features,
+  color,
+  gradient,
+  textColor,
+  index,
+}) => {
   const cardStyle = {
     backgroundColor: color,
     backgroundImage: gradient,
@@ -17,8 +26,28 @@ const PriceCards = ({ price, title, features, color, gradient, textColor }) => {
   const titleTextColor = title === "Standard" ? "#FFFFFF" : "#6717CD";
   const borderType = title === "Standard" ? "none" : "solid";
 
+  const staggerCardsVars = {
+    initial: {
+      opacity: 0,
+      y: 100,
+    },
+    animate: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.5,
+        delay: 0.5 * index,
+        ease: [0.12, 0, 0.39, 0],
+      },
+    },
+  };
+
   return (
-    <div
+    <motion.div
+      variants={staggerCardsVars}
+      initial="initial"
+      whileInView="animate"
+      viewport={{ once: true }}
       className="shadow-2xl max-md:w-full max-lg:w-2/3 w-1/3 mx-auto"
       style={{ ...cardStyle }}
     >
@@ -79,7 +108,7 @@ const PriceCards = ({ price, title, features, color, gradient, textColor }) => {
           Contact Me
         </button>
       </a>
-    </div>
+    </motion.div>
   );
 };
 

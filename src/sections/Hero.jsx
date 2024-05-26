@@ -26,7 +26,7 @@ const Hero = () => {
             </button>
           </a>
         </div>
-        <div className="">
+        <div>
           <img src={hero_image} alt="devices" />
         </div>
       </div>

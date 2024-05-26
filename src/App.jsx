@@ -1,5 +1,12 @@
 import Nav from "./components/Nav";
-import { Hero, About_home, Portfolio, About_me, Pricing } from "./sections";
+import {
+  Hero,
+  About_home,
+  Portfolio,
+  About_me,
+  Pricing,
+  Footer,
+} from "./sections";
 
 function App() {
   return (
@@ -19,6 +26,9 @@ function App() {
       </section>
       <section>
         <About_me />
+      </section>
+      <section>
+        <Footer />
       </section>
     </main>
   );

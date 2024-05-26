@@ -39,7 +39,8 @@ const About_home = () => {
       <div className="flex max-lg:flex-col items-center justify-center mt-10 gap-10">
         {aboutCards.map((card) => (
           <AboutCards
-            key={card.title}
+            key={card.index}
+            index={card.index}
             image={card.src}
             title={card.title}
             description={card.description}

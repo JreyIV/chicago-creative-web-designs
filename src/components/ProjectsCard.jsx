@@ -1,10 +1,27 @@
 /* eslint-disable react/prop-types */
-
 import { right_arrow } from "../assets/icons";
+import { motion } from "framer-motion";
 
 const ProjectsCard = ({ image, title, description, link }) => {
+  const scaleVars = {
+    initial: {
+      scale: 0,
+    },
+    animate: {
+      scale: 1,
+      transition: {
+        duration: 0.5,
+        delay: 0.2,
+        ease: [0.12, 0, 0.39, 0],
+      },
+    },
+  };
   return (
-    <div
+    <motion.div
+      variants={scaleVars}
+      initial="initial"
+      whileInView="animate"
+      viewport={{ once: true }}
       className=" max-md:w-full h-[20rem] rounded-lg shadow-2xl z-10"
       style={{
         backgroundImage: `url(${image})`,
@@ -24,7 +41,7 @@ const ProjectsCard = ({ image, title, description, link }) => {
           Visit <img src={right_arrow} alt="right arrow" width={30} />
         </a>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
