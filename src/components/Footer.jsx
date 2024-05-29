@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 const Footer = () => {
   return (
-    <footer className="absolute flex justify-between bg-transparent items-center py-10 max-md:px-5 px-20 max-lg:bg-opacity-0 text-white w-full bg-gradient-to-b from-brand-blue-800 to-brand-blue-400">
+    <footer className="flex justify-between bg-transparent items-center py-10 max-md:px-5 px-20 max-lg:bg-opacity-0 text-white w-full bg-gradient-to-b from-brand-blue-800 to-brand-blue-400 max-w-[1920px] mx-auto">
       <div className="max-container relative flex flex-col gap-10 items-center w-full max-md:px-5">
         <a href="/">
           <img

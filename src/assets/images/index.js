@@ -15,6 +15,17 @@ import chicago_skyline_v3 from "./chicago_skyline_v3.png";
 import me from "./me.jpg";
 import blob1 from "./blob1.svg";
 import maintenance_package from "./maintenance_package.png";
+import personal_developer from "./personal_developer.png";
+import design_service from "./design_service.png";
+import development_service from "./development_service.png";
+import code_service from "./code_service.png";
+import branding from "./branding.png";
+
+// background images for pages
+import about_background from "./about_background.jpg";
+import services_background from "./services_background.jpg";
+import portfolio_background from "./portfolio_background.jpg";
+import contact_background from "./contact_background.jpg";
 
 export {
   chicago_creative_logo,
@@ -34,4 +45,13 @@ export {
   me,
   blob1,
   maintenance_package,
+  about_background,
+  personal_developer,
+  services_background,
+  portfolio_background,
+  contact_background,
+  design_service,
+  development_service,
+  code_service,
+  branding,
 };

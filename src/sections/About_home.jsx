@@ -8,9 +8,9 @@ const About_home = () => {
       <div className="flex flex-col gap-5 items-center justify-center text-center  max-sm:mt-[35rem] max-md:mt-[40rem] max-lg:mt-[25rem] mt-[20rem] lg:px-20 ">
         <h2 className="font-poppins text-3xl font-bold uppercase">
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FFe031] to-[#F04579]">
-            Crafting
+            What
           </span>{" "}
-          Experiences.
+          I Do.
         </h2>
         <div className="flex items-center w-[10rem]">
           <div

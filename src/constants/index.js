@@ -7,12 +7,23 @@ import {
   studybnb,
 } from "../assets/images";
 
+import {
+  keyword_optimization,
+  catalog_magazine,
+  on_page_seo,
+  internal_linking,
+  mobile_friendliness,
+  page_load_speed,
+  meta_descriptions,
+  image_optimization,
+} from "../assets/icons";
+
 export const NavLinks = [
-  { href: "#home", label: "Home" },
-  { href: "#about", label: "About" },
-  { href: "#services", label: "Services" },
-  { href: "#portfolio", label: "Portfolio" },
-  { href: "#contact", label: "Contact" },
+  { href: "/", label: "Home" },
+  { href: "/about", label: "About" },
+  { href: "/services", label: "Services" },
+  { href: "/portfolio", label: "Portfolio" },
+  { href: "/contact", label: "Contact" },
 ];
 
 export const aboutCards = [
@@ -139,4 +150,106 @@ export const maintenance_package_feautures = [
     title: "Backup Services",
     description: "Regular backups to prevent data loss",
   },
+];
+
+export const designCard = [
+  {
+    title: "Custom Design",
+    description:
+      "Unique, tailor-made designs reflecting your brand's personality.",
+  },
+  {
+    title: "User Experience Focused",
+    description: "Intuitive and enjoyable designs that keep visitors engaged.",
+  },
+  {
+    title: "Responsive Design",
+    description:
+      "Beautiful and functional on all devices, from desktops to smartphones.",
+  },
+  {
+    title: "Brand Integration",
+    description: "Cohesive look and feel, aligned with your brand's identity.",
+  },
+  {
+    title: "Visual Elements",
+    description:
+      "Modern trends, typography, colors, and imagery for stunning visuals.",
+  },
+];
+
+export const developmentCard = [
+  {
+    title: "Hand Written Code",
+    description:
+      "Hand-coded solutions tailored to your needs, avoiding templates.",
+  },
+  {
+    title: "Performance Optimization",
+    description: "Focus on speed and performance for quick load times.",
+  },
+  {
+    title: "SEO Best Practices",
+    description:
+      "Development includes SEO techniques for higher search rankings.",
+  },
+  {
+    title: "Scalability",
+    description: "Build scalable solutions that grow with your business.",
+  },
+  {
+    title: "E-Commerce Solutions",
+    description:
+      "Robust platforms with features like product management and payment gateways.",
+  },
+];
+
+export const seoCards = [
+  {
+    src: keyword_optimization,
+    title: "Keywords Optimization",
+    description: "Use relevant keywords in your content and meta tags.",
+  },
+  {
+    src: catalog_magazine,
+    title: "Quality Content",
+    description: "Create valuable, engaging content that your audience needs.",
+  },
+  {
+    src: on_page_seo,
+    title: "On-Page SEO",
+    description: "Optimize titles, headers, and images with keywords.",
+  },
+  {
+    src: internal_linking,
+    title: "Internal Linking",
+    description: "Connect related content within your site.",
+  },
+  {
+    src: mobile_friendliness,
+    title: "Mobile-Friendliness",
+    description: "Ensure your site works well on mobile devices.",
+  },
+  {
+    src: page_load_speed,
+    title: "Page Load Speed",
+    description: "Make your site load faster by optimizing images and scripts.",
+  },
+  {
+    src: meta_descriptions,
+    title: "Meta Descriptions",
+    description: "Write compelling summaries for each page.",
+  },
+  {
+    src: image_optimization,
+    title: "Image Optimization",
+    description: "Use descriptive file names and alt text for images.",
+  },
+];
+
+export const logoFeatures = [
+  "Logos starting at as low as $120",
+  "Less than 24 hour delivery",
+  "Unlimited Revisions",
+  "Will make multiple versions that you can choose from",
 ];
