@@ -16,6 +16,10 @@ import {
   page_load_speed,
   meta_descriptions,
   image_optimization,
+  select,
+  message,
+  consult,
+  deliver,
 } from "../assets/icons";
 
 export const NavLinks = [
@@ -252,4 +256,35 @@ export const logoFeatures = [
   "Less than 24 hour delivery",
   "Unlimited Revisions",
   "Will make multiple versions that you can choose from",
+];
+
+export const processSteps = [
+  {
+    icon: select,
+    step: "01",
+    title: "Select Service",
+    description:
+      "Select the service that best suits your needs. Website? Design and Website? Logo? I've got you covered.",
+  },
+  {
+    icon: message,
+    step: "02",
+    title: "Send Message",
+    description:
+      "Fill out the form the contact form, giving me a super brief overview of your business and project needs/ideas.",
+  },
+  {
+    icon: consult,
+    step: "03",
+    title: "Consult with Me",
+    description:
+      "I will get back to you ASAP and set up a meeting to discuss project in detail and provide pricing",
+  },
+  {
+    icon: deliver,
+    step: "04",
+    title: "Develop and Deliver",
+    description:
+      "I will develop and deliver your project ASAP, keeping you updated on the progress and making revisions when needed.",
+  },
 ];

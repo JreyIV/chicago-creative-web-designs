@@ -20,6 +20,14 @@
     border-image-slice: fill 1;
   }
 
+  .blue-overlay {
+    border-image-source: linear-gradient(
+      hsl(239, 94%, 19%, 0.7),
+      hsl(239, 94%, 19%, 0.9)
+    );
+    border-image-slice: fill 1;
+  }
+
   .spacer {
     aspect-ratio: 960/540;
     width: 100%;

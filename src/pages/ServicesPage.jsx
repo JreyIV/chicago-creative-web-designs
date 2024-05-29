@@ -4,14 +4,19 @@ import {
   development_service,
   code_service,
   branding,
+  process_background,
+  cube,
 } from "../assets/images";
-import { check, check2 } from "../assets/icons";
+import { arrow, check, check2 } from "../assets/icons";
 import {
   designCard,
   developmentCard,
   seoCards,
   logoFeatures,
+  processSteps,
+  prices,
 } from "../constants";
+import PriceCards from "../components/PriceCards";
 import { motion } from "framer-motion";
 
 const ServicesPage = () => {
@@ -40,7 +45,22 @@ const ServicesPage = () => {
       x: 0,
       transition: {
         duration: 0.5,
-        delay: 0.1 * index,
+        delay: 0.3 * index,
+        ease: [0.12, 0, 0.39, 0],
+      },
+    }),
+  };
+  const staggerCardsRightVars = {
+    initial: {
+      opacity: 0,
+      x: -50,
+    },
+    animate: (index) => ({
+      opacity: 1,
+      x: 0,
+      transition: {
+        duration: 0.9,
+        delay: 0.3 * index,
         ease: [0.12, 0, 0.39, 0],
       },
     }),
@@ -160,7 +180,8 @@ const ServicesPage = () => {
             </p>
             <p className="font-jakarta text-lg text-slate-600">
               Stop overpaying for subpar websites that don&apos;t meet your
-              business needs. Your business is worth so much more than that.
+              business needs. Your business is worth so much more than a drag
+              and drop art project.
             </p>
           </div>
           <img src={code_service} alt="coder image" width={500} />
@@ -237,6 +258,99 @@ const ServicesPage = () => {
             </ul>
           </div>
           <img src={branding} alt="designer image" width={500} />
+        </div>
+      </div>
+
+      {/* my process */}
+      <div
+        className="mt-10 mb-10 w-lvw blue-overlay bg-fixed relative "
+        style={{
+          backgroundImage: `url(${process_background})`,
+          backgroundPosition: "center",
+          backgroundSize: "cover",
+        }}
+      >
+        <img
+          src={cube}
+          alt="cube"
+          className="absolute top-[-60px] left-20 w-[150px] max-lg:w-[100px]"
+        />
+        <img
+          src={cube}
+          alt="cube"
+          className="absolute top-[-80px] left-12 w-[50px] max-lg:w-[40px]"
+        />
+        <img
+          src={cube}
+          alt="cube"
+          className="absolute bottom-[-40px] right-12 w-[100px]"
+        />
+        <div className="max-container px-5 py-20">
+          <div className="flex flex-col gap-5 text-center items-center">
+            <h2 className="font-poppins font-bold text-3xl text-white">
+              My <span className="text-brand-blue-400">Straightforward</span>{" "}
+              Process
+            </h2>
+            <p className="font-jakarta text-lg text-slate-300">
+              My simple and effective process will take you from concept to
+              launch with ease. No hassle, no wasting time.
+            </p>
+          </div>
+          <div className="flex max-lg:flex-col gap-5 mt-20 text-white">
+            {processSteps.map((step, index) => (
+              <motion.div
+                key={index}
+                variants={staggerCardsRightVars}
+                initial="initial"
+                whileInView="animate"
+                viewport={{ once: true }}
+                custom={index}
+                className="flex max-lg:flex-col items-center gap-5 w-1/4 max-lg:w-full"
+              >
+                <div className="flex flex-col gap-2 text-center items-center max-w-[20rem]">
+                  <span className="font-poppins text-4xl font-bold  w-fit relative">
+                    <div className="bg-blue-300 inline-block w-fit h-fit absolute top-[5px] left-[-18px] rounded-full p-1">
+                      <img src={step.icon} alt="check" width={20} />
+                    </div>
+                    {step.step}
+                  </span>
+                  <h3 className="font-poppins text-lg font-bold ">
+                    {step.title}
+                  </h3>
+                  <p className="font-jakarta text-sm">{step.description}</p>
+                </div>
+                {index !== 3 ? (
+                  <img
+                    src={arrow}
+                    alt="arrow icon"
+                    width={40}
+                    className="transform -scale-y-100 rotate-45 max-lg:rotate-90"
+                  />
+                ) : (
+                  <div></div>
+                )}
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* prices */}
+
+      <div className="max-container px-5 py-20 overflow-hidden">
+        <div className="w-full flex max-lg:flex-col gap-5 mt-10 px-5 z-10 text-black">
+          {prices.map((price) => (
+            <PriceCards
+              key={price.title}
+              index={price.index}
+              title={price.title}
+              price={price.price}
+              features={price.features}
+              color={price.color}
+              gradient={price.gradient}
+              textColor={price.textColor}
+            />
+          ))}
         </div>
       </div>
     </main>

@@ -3,6 +3,7 @@ import right_arrow from "./right_arrow.svg";
 import check from "./check.svg";
 import check2 from "./check2.svg";
 import dollar from "./dollar.svg";
+import arrow from "./arrow.svg";
 
 // seo icons
 import keyword_optimization from "./keyword_optimization.svg";
@@ -13,6 +14,12 @@ import mobile_friendliness from "./mobile_friendliness.svg";
 import page_load_speed from "./page_load_speed.svg";
 import meta_descriptions from "./meta_descriptions.svg";
 import image_optimization from "./image_optimization.svg";
+
+// process icons
+import select from "./select.svg";
+import message from "./message.svg";
+import consult from "./consult.svg";
+import deliver from "./deliver.svg";
 
 export {
   hamburger,
@@ -28,4 +35,9 @@ export {
   page_load_speed,
   meta_descriptions,
   image_optimization,
+  arrow,
+  select,
+  message,
+  consult,
+  deliver,
 };

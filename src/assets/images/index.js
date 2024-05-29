@@ -20,6 +20,8 @@ import design_service from "./design_service.png";
 import development_service from "./development_service.png";
 import code_service from "./code_service.png";
 import branding from "./branding.png";
+import process_background from "./process_background.jpg";
+import cube from "./cube.svg";
 
 // background images for pages
 import about_background from "./about_background.jpg";
@@ -54,4 +56,6 @@ export {
   development_service,
   code_service,
   branding,
+  process_background,
+  cube,
 };
