@@ -23,7 +23,7 @@
   .blue-overlay {
     border-image-source: linear-gradient(
       hsl(239, 94%, 19%, 0.7),
-      hsl(239, 94%, 19%, 0.9)
+      hsla(239, 94%, 19%, 0.902)
     );
     border-image-slice: fill 1;
   }

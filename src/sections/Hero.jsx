@@ -1,4 +1,5 @@
 import { hero_image } from "../assets/images";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
@@ -20,11 +21,11 @@ const Hero = () => {
             Make a powerful online impression with a website that is as unique
             and dynamic as your business.
           </p>
-          <a href="">
+          <Link to={"/contact"}>
             <button className="btn btn-md inline uppercase bg-white border-none text-black hover:bg-slate-100 ">
               Get in touch
             </button>
-          </a>
+          </Link>
         </div>
         <div>
           <img src={hero_image} alt="devices" />

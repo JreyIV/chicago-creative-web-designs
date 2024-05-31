@@ -23,7 +23,7 @@
 
 // export default Nav;
 
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { useState, useEffect } from "react";
 import {
   AnimatePresence,
@@ -109,22 +109,26 @@ const Nav = () => {
         animate={isSmallScreen ? "visible" : isNavHidden ? "hidden" : "visible"}
       >
         <div className="max-container relative flex justify-between items-center w-full max-md:px-5">
-          <Link to="/">
+          <NavLink to="/">
             <img
               src={chicago_creative_logo}
               alt="Chicago Creative Logo"
               width={isSmallScreen ? 200 : 300}
             />
-          </Link>
+          </NavLink>
           <ul className="flex justify-center items-center max-xl:gap-10 gap-20 max-lg:hidden font-bold ml-auto">
             {NavLinks.map((link) => (
               <li key={link.label}>
-                <Link
+                <NavLink
                   to={link.href}
-                  className="font-okine leading-normal text-lg text-white hover:text-brand-blue-800 transition duration-300 ease-in-out"
+                  className={({ isActive }) =>
+                    `font-okine leading-normal text-lg text-white hover:text-brand-blue-800 transition duration-300 ease-in-out ${
+                      isActive ? "border-b-2 pb-3 border-brand-blue-200" : ""
+                    }`
+                  }
                 >
                   {link.label}
-                </Link>
+                </NavLink>
               </li>
             ))}
           </ul>
@@ -166,13 +170,13 @@ const Nav = () => {
                             key={link.label}
                             whileHover={{ scale: 1.25 }}
                           >
-                            <Link
+                            <NavLink
                               to={link.href}
                               className="font-okine text-6xl leading-normal text-off-white uppercase"
                               onClick={closeMenu}
                             >
                               {link.label}
-                            </Link>
+                            </NavLink>
                           </motion.li>
                         </div>
                       ))}

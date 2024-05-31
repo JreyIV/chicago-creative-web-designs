@@ -1,6 +1,6 @@
 import { chicago_creative_logo } from "../assets/images";
 import { NavLinks } from "../constants";
-import { motion } from "framer-motion";
+import { NavLink } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -26,13 +26,15 @@ const Footer = () => {
         <ul className="flex justify-center items-center max-xl:gap-10 gap-20 font-bold max-md:flex-col max-md:mr-auto max-md:gap-5">
           {NavLinks.map((link) => (
             <li key={link.label}>
-              <motion.a
-                href={link.href}
-                className="font-okine leading-normal text-lg text-white"
-                whileHover={{ color: "#5e60ce" }}
+              <NavLink
+                to={link.href}
+                className="font-okine leading-normal text-lg text-white hover:text-brand-blue-800 transition duration-300 ease-in-out"
+                onClick={() => {
+                  window.scrollTo(0, 0);
+                }}
               >
                 {link.label}
-              </motion.a>
+              </NavLink>
             </li>
           ))}
         </ul>
