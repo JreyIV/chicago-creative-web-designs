@@ -22,6 +22,7 @@ import code_service from "./code_service.png";
 import branding from "./branding.png";
 import process_background from "./process_background.jpg";
 import cube from "./cube.svg";
+import contact_image from "./contact_image.png";
 
 // background images for pages
 import about_background from "./about_background.jpg";
@@ -62,4 +63,5 @@ export {
   process_background,
   cube,
   nails_by_tay_thumbnail,
+  contact_image,
 };

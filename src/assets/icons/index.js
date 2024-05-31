@@ -5,6 +5,7 @@ import check2 from "./check2.svg";
 import dollar from "./dollar.svg";
 import arrow from "./arrow.svg";
 import link_arrow from "./link_arrow.svg";
+import plane from "./plane.svg";
 
 // seo icons
 import keyword_optimization from "./keyword_optimization.svg";
@@ -42,4 +43,5 @@ export {
   consult,
   deliver,
   link_arrow,
+  plane,
 };

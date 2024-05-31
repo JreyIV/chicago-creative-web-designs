@@ -130,7 +130,12 @@ const PortfolioPage = () => {
           </div>
           <div className="max-md:w-full w-1/2 items-end max-md:items-start flex flex-col">
             <Link to={"/contact"}>
-              <button className="p-5 font-poppins font-bold text-white text-xl flex gap-2 items-center border-2 rounded-full hover:border-blue-500 hover:bg-blue-500 transition duration-500">
+              <button
+                className="p-5 font-poppins font-bold text-white text-xl flex gap-2 items-center border-2 rounded-full hover:border-blue-500 hover:bg-blue-500 transition duration-500"
+                onClick={() => {
+                  window.scrollTo(0, 0);
+                }}
+              >
                 Contact Me
                 <img src={right_arrow} alt="right arrow icon" width={15} />
               </button>

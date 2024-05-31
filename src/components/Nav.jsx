@@ -36,6 +36,22 @@ import { hamburger } from "../assets/icons";
 import { chicago_creative_logo } from "../assets/images";
 
 const Nav = () => {
+  const staggerCardsLeftVars = {
+    initial: {
+      opacity: 0,
+      x: 50,
+    },
+    animate: (index) => ({
+      opacity: 1,
+      x: 0,
+      transition: {
+        duration: 0.5,
+        delay: index * 0.1,
+        ease: [0.12, 0, 0.39, 0],
+      },
+    }),
+  };
+
   const [isOpen, setIsOpen] = useState(false);
   const [isSmallScreen, setIsSmallScreen] = useState(false);
   const [isNavHidden, setIsNavHidden] = useState(false);
@@ -61,17 +77,17 @@ const Nav = () => {
 
   const menuVars = {
     initial: {
-      scaleY: 0,
+      translateX: "100%",
     },
     animate: {
-      scaleY: 1,
+      translateX: 0,
       transition: {
         duration: 0.5,
         ease: [0.12, 0, 0.39, 0],
       },
     },
     exit: {
-      scaleY: 0,
+      translateX: "100%",
       transition: {
         duration: 0.5,
         ease: [0.22, 1, 0.36, 1],
@@ -122,7 +138,7 @@ const Nav = () => {
                 <NavLink
                   to={link.href}
                   className={({ isActive }) =>
-                    `font-okine leading-normal text-lg text-white hover:text-brand-blue-800 transition duration-300 ease-in-out ${
+                    `font-okine leading-normal text-lg text-white hover:text-brand-blue-200 transition duration-300 ease-in-out ${
                       isActive ? "border-b-2 pb-3 border-brand-blue-200" : ""
                     }`
                   }
@@ -147,13 +163,10 @@ const Nav = () => {
                 initial="initial"
                 animate="animate"
                 exit="exit"
-                className="fixed left-0 top-0 w-full h-screen origin-top bg-brand-green p-10 z-50"
+                className="fixed right-0 top-0 w-[60%] h-screen origin-top bg-brand-blue-600 p-10 z-50"
               >
                 <div className="flex h-full flex-col">
-                  <div className="flex justify-between">
-                    <h1 className="text-okine text-lg text-off-white">
-                      Joseph.
-                    </h1>
+                  <div className="flex justify-end">
                     <motion.p
                       className="cursor-pointer text-md text-off-white"
                       whileHover={{ scale: 1.3, color: "#14746F" }}
@@ -162,18 +175,28 @@ const Nav = () => {
                       Close
                     </motion.p>
                   </div>
-                  <div className="flex flex-col h-full justify-center items-center gap-4">
-                    <ul>
-                      {NavLinks.map((link) => (
-                        <div key={link.label}>
+                  <div className="flex flex-col h-full mt-20 items-ends text-end">
+                    <ul className="flex flex-col gap-y-5">
+                      {NavLinks.map((link, index) => (
+                        <div key={index}>
                           <motion.li
-                            key={link.label}
-                            whileHover={{ scale: 1.25 }}
+                            key={index}
+                            variants={staggerCardsLeftVars}
+                            initial="initial"
+                            whileInView="animate"
+                            viewport={{ once: true }}
+                            custom={index}
                           >
                             <NavLink
                               to={link.href}
-                              className="font-okine text-6xl leading-normal text-off-white uppercase"
                               onClick={closeMenu}
+                              className={({ isActive }) =>
+                                `font-okine leading-normal text-lg text-white hover:text-brand-blue-800 transition duration-300 ease-in-out ${
+                                  isActive
+                                    ? "border-r-2 pr-5 border-brand-blue-200 text-brand-blue-200"
+                                    : ""
+                                }`
+                              }
                             >
                               {link.label}
                             </NavLink>
