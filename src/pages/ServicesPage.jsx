@@ -45,7 +45,7 @@ const ServicesPage = () => {
       x: 0,
       transition: {
         duration: 0.5,
-        delay: 0.3 * index,
+        delay: 0.1 * index,
         ease: [0.12, 0, 0.39, 0],
       },
     }),

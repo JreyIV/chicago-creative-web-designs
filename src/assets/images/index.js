@@ -29,6 +29,9 @@ import services_background from "./services_background.jpg";
 import portfolio_background from "./portfolio_background.jpg";
 import contact_background from "./contact_background.jpg";
 
+// portfolio thumbnails
+import nails_by_tay_thumbnail from "./nails_by_tay_thumbnail.png";
+
 export {
   chicago_creative_logo,
   hero_image,
@@ -58,4 +61,5 @@ export {
   branding,
   process_background,
   cube,
+  nails_by_tay_thumbnail,
 };

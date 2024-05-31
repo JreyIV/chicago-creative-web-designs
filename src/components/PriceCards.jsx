@@ -36,7 +36,7 @@ const PriceCards = ({
       y: 0,
       transition: {
         duration: 0.5,
-        delay: 0.5 * index,
+        delay: 0.3 * index,
         ease: [0.12, 0, 0.39, 0],
       },
     },

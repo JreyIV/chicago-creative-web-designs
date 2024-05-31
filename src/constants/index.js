@@ -5,6 +5,7 @@ import {
   nails_by_tay,
   personal_portfolio,
   studybnb,
+  nails_by_tay_thumbnail,
 } from "../assets/images";
 
 import {
@@ -286,5 +287,13 @@ export const processSteps = [
     title: "Develop and Deliver",
     description:
       "I will develop and deliver your project ASAP, keeping you updated on the progress and making revisions when needed.",
+  },
+];
+
+export const portfolioThumbnails = [
+  {
+    business: "Nails by Tay",
+    src: nails_by_tay_thumbnail,
+    link: "https://nails-by-tay.netlify.app/",
   },
 ];
