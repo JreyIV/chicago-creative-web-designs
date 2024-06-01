@@ -12,7 +12,7 @@ const ProjectsCard = ({ image, title, description, link }) => {
       scale: 1,
       opacity: 1,
       transition: {
-        duration: 0.5,
+        duration: 0.7,
         delay: 0.2,
         ease: [0.12, 0, 0.39, 0],
       },

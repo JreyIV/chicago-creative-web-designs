@@ -38,9 +38,13 @@ const Footer = () => {
             </li>
           ))}
         </ul>
-        <p className="text-xs">
-          All Rights Reserved Copyright &copy; Chicago Creative Web Designs 2024
-        </p>
+        <div className="flex flex-col items-center gap-5">
+          <p className="text-md font-jakarta">ccwdinfo@gmail.com</p>
+          <p className="text-xs">
+            All Rights Reserved Copyright &copy; Chicago Creative Web Designs
+            2024
+          </p>
+        </div>
       </div>
     </footer>
   );

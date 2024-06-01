@@ -1,8 +1,37 @@
 import { plane } from "../assets/icons";
 import { contact_background, contact_image } from "../assets/images";
 import { motion, useAnimationControls } from "framer-motion";
+import { useState, useRef } from "react";
+import emailjs from "@emailjs/browser";
+import EmailConfirm from "../components/EmailConfirm";
 
 const ContactPage = () => {
+  const form = useRef();
+
+  const [isSuccess, setIsSuccess] = useState(false);
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm("service_91kcy3r", "template_5jlt5qh", form.current, {
+        publicKey: "AZWfgdChQ0kNhybG1",
+      })
+      .then(
+        () => {
+          form.current.reset();
+          setIsSuccess(true);
+          setTimeout(() => {
+            setIsSuccess(false);
+          }, 7000);
+          console.log("SUCCESS!");
+        },
+        (error) => {
+          console.log("FAILED...", error.text);
+        }
+      );
+  };
+
   const controls = useAnimationControls();
 
   const handleHover = () => {
@@ -54,18 +83,23 @@ const ContactPage = () => {
             </h2>
             <p className="font-jakarta text-md text-slate-600">
               Fill out this form with your full name, company name , email, and
-              super small description of your desired project. I will get back
-              to you ASAP to set up a meeting so that we can discuss further!
+              super small description of your desired project. Or you can email
+              me at I will get back to you ASAP to set up a meeting so that we
+              can discuss further!
             </p>
           </div>
-          <form className="flex flex-col gap-5">
+          <form
+            className="flex flex-col gap-5 text-black"
+            ref={form}
+            onSubmit={sendEmail}
+          >
             {/* name */}
             <label className="block w-full">
               <span className="font-jakarta text-black text-sm font-medium transition-transform peer-focus:scale-0">
                 Full Name
               </span>
               <input
-                name="full_name"
+                name="name"
                 className="w-full rounded border border-slate-300 p-2 text-sm focus:border-brand-blue-400 focus:outline-none bg-transparent peer"
                 required
               />
@@ -76,7 +110,7 @@ const ContactPage = () => {
                 Company Name
               </span>
               <input
-                name="company_name"
+                name="company"
                 className="w-full rounded border border-slate-300 p-2 text-sm focus:border-brand-blue-400 focus:outline-none bg-transparent peer"
                 required
               />
@@ -127,6 +161,7 @@ const ContactPage = () => {
                 </motion.button>
               </div>
             </div>
+            {isSuccess && <EmailConfirm />}
           </form>
         </div>
       </div>

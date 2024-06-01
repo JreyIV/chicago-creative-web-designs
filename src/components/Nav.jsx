@@ -169,7 +169,7 @@ const Nav = () => {
                   <div className="flex justify-end">
                     <motion.p
                       className="cursor-pointer text-md text-off-white"
-                      whileHover={{ scale: 1.3, color: "#14746F" }}
+                      whileHover={{ scale: 1.3, color: "#48bfe3" }}
                       onClick={toggleMenu}
                     >
                       Close

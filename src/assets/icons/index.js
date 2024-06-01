@@ -6,6 +6,7 @@ import dollar from "./dollar.svg";
 import arrow from "./arrow.svg";
 import link_arrow from "./link_arrow.svg";
 import plane from "./plane.svg";
+import confirm from "./confirm.svg";
 
 // seo icons
 import keyword_optimization from "./keyword_optimization.svg";
@@ -44,4 +45,5 @@ export {
   deliver,
   link_arrow,
   plane,
+  confirm,
 };

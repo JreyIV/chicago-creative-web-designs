@@ -84,8 +84,7 @@ const ServicesPage = () => {
         <div className="pb-20">
           <div className="flex flex-col gap-5 text-center items-center justify-center pb-20 text-black">
             <h2 className="font-poppins text-3xl font-bold lg:w-3/4">
-              Comprehensive Web Design and Development for Seamless Online
-              Experiences
+              Precise Web Design and Development for Seamless Online Experiences
             </h2>
             <p className="font-jakarta text-lg lg:w-3/4 text-slate-400">
               Create custom, high-performance websites that ensure smooth and
