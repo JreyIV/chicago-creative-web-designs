@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 // import App from "./App.jsx";
+import ReactGA from "react-ga4";
 import "./index.css";
 import {
   HomePage,
@@ -14,6 +15,13 @@ import {
 import Nav from "./components/Nav";
 import Footer from "./components/Footer";
 
+// Google Analytics
+
+ReactGA.initialize("G-FY0BX8EQQQ");
+
+ReactGA.send({ hitType: "pageview", page: "/", title: "Home Page" });
+
+// router
 const router = createBrowserRouter([
   {
     element: (
