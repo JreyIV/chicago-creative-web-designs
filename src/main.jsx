@@ -20,6 +20,14 @@ import Footer from "./components/Footer";
 ReactGA.initialize("G-FY0BX8EQQQ");
 
 ReactGA.send({ hitType: "pageview", page: "/", title: "Home Page" });
+ReactGA.send({ hitType: "pageview", page: "/about", title: "About Page" });
+ReactGA.send({ hitType: "pageview", page: "/services", title: "Service Page" });
+ReactGA.send({
+  hitType: "pageview",
+  page: "/portfolio",
+  title: "Portfolio Page",
+});
+ReactGA.send({ hitType: "pageview", page: "/contact", title: "Contact Page" });
 
 // router
 const router = createBrowserRouter([
