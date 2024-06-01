@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 import { check, dollar } from "../assets/icons";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const PriceCards = ({
   price,
@@ -97,17 +98,20 @@ const PriceCards = ({
           </p>
         </div>
       ))}
-      <a href="" className="mt-auto w-full ">
+      <Link to={"/contact"} className="mt-auto w-full ">
         <button
           className="w-full p-3 rounded-full font-jakarta text-sm font-bold hover:scale-105 transition-all duration-300 ease-in-out "
           style={{
             backgroundColor: buttonBackgroundColor,
             border: borderType,
           }}
+          onClick={() => {
+            window.scrollTo(0, 0);
+          }}
         >
           Contact Me
         </button>
-      </a>
+      </Link>
     </motion.div>
   );
 };

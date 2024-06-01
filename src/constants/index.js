@@ -272,7 +272,7 @@ export const processSteps = [
     step: "02",
     title: "Send Message",
     description:
-      "Fill out the form the contact form, giving me a super brief overview of your business and project needs/ideas.",
+      "Fill out the contact form, giving me a super brief overview of your business and project needs/ideas.",
   },
   {
     icon: consult,

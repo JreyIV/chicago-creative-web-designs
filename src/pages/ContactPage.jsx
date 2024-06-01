@@ -83,9 +83,8 @@ const ContactPage = () => {
             </h2>
             <p className="font-jakarta text-md text-slate-600">
               Fill out this form with your full name, company name , email, and
-              super small description of your desired project. Or you can email
-              me at I will get back to you ASAP to set up a meeting so that we
-              can discuss further!
+              a short description of your desired project. I will get back to
+              you ASAP to set up a meeting so that we can discuss further!
             </p>
           </div>
           <form
