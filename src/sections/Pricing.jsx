@@ -75,14 +75,14 @@ const Pricing = () => {
               Maintenance Package
             </h3>
             <p className="font-jakarta font-bold text-xl">
-              <span className="text-brand-blue-600">40%</span> off ticketed
-              price, <span className="text-brand-blue-600">$150</span> per
-              month, 6 month minimum contract
+              <span className="text-brand-blue-600">50%</span> off ticketed
+              price, <span className="text-brand-blue-600">$50</span> per month,
+              6 month minimum contract
             </p>
             <p className="font-jakarta text-lg leading-relaxed">
               Keep your website running smoothly with our maintenance
-              package—get 40% off the original design and development cost and
-              pay $150 a month for ongoing updates, fixes, and support to ensure
+              package—get 50% off the original design and development cost and
+              pay $50 a month for ongoing updates, fixes, and support to ensure
               your site stays at its best.
             </p>
             <div className="grid grid-cols-2 max-lg:grid-cols-1 gap-5 mt-10">
